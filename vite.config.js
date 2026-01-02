@@ -6,8 +6,10 @@ export default defineConfig({
   plugins: [
     react(),
     nodePolyfills({
-      // To polyfill specific modules, you can specify them here.
-      // By default, it polyfills many Node.js modules.
+      // Polyfill specific Node.js modules if needed
     }),
   ],
+  build: {
+    outDir: 'build', // <-- Change output folder from 'dist' to 'build'
+  },
 })
